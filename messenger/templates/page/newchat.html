@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+<form method="POST">
+    {% csrf_token %}
+    <h3> Создать чат </h3>
+    <p>Выберете название:</p>
+    <input type="text" class="textform" maxlength="30" pattern="^[a-zA-Z0-9]+$" name="name"><br>
+    <p>Пригласите собеседника:</p>
+    <input type="text" class="textform" name="user"/><br>
+    <input type="submit" class="pressbutton" value="Создать чат">
+</form>
+
+{% else %}
+<h3><a href="http://127.0.0.1:8000/accounts/login"> Для начала общения зайдите в свой аккаунт.</a></h3>
+{% endif %}
+
+{% endblock content %}

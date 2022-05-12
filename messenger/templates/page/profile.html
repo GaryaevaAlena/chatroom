@@ -1,0 +1,22 @@
+
+{% extends 'index.html' %}
+
+
+<body>
+{% block content %}
+    {% if user.is_authenticated %}
+
+        <h3> Профиль {{ Person.user.username }} </h3>
+        {% if Person.user.profile.avatar %}
+            <img src="{{ Person.user.profile.avatar.url }}" alt="avatar">
+        {% endif %}
+
+    <p>Имя: {{ Person.user.first_name }} </p>
+    <p>Фамилия: {{ Person.user.last_name }} </p>
+    <p>Пол: {{ Person.user.profile.sex }} </p>
+
+    {% else %}
+    <h3><a href="http://127.0.0.1:8000/accounts/login"> Для начала общения зайдите в свой аккаунт.</a></h3>
+    {% endif %}
+{% endblock content %}
+</body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Chatroom</title>
+        {% load static %}
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+       <div class="header">
+        <div class="inner-header">
+            <div class="logo-container">
+                <h1>Chatroom</h1>
+            </div>
+            <nav>
+            <ul class="navigation">
+                <a href="/page/profile"><li>Личный кабинет</li></a>
+                <a href="/page/"><li>Создать чат</li></a>
+            </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="content">
+                {% block content %}
+        {% endblock content %}
+    </div>
+    </body>
+</html>

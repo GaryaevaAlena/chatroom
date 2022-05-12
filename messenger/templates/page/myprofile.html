@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+<body>
+{% block content %}
+
+    <h3> Ваш профиль, {{ user.username }} </h3>
+
+    {% if user.profile.avatar %}
+        <img src="{{ user.profile.avatar.url }}" alt="avatar"><br>
+    {% endif %}
+        <p>Имя: {{ user.first_name }} </p>
+        <p>Фамилия: {{ user.last_name }} </p>
+        <p>Пол: {{ user.profile.sex }} </p>
+    <a href="{% url 'edit' %}"><u>Редактировать ваш профиль</u></a><br>
+
+
+    <a>Чаты в которых вы состоите: </a><br>
+    {% for Chat in chats %}
+        <a href="{% url 'chatter' Chat.id %}"><u>{{ Chat.nameChat }}</u></a><br>
+    {% endfor %}
+
+{% endblock content %}
+</body>

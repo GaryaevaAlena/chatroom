@@ -1,0 +1,16 @@
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <div class="form-wrapper">
+       <h3>{{user.username}}</h3>
+   <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ profile_form.as_p  }}
+       {{ user_form.as_p }}
+    <input type="submit" class="pressbutton" value="Добавить">
+    </form>
+</div>
+
+{% endblock %}

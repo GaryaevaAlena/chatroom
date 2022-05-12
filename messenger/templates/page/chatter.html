@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h3>Участники чата</h3>
+<div class="ref">
+    {% for UserChat in chatter.penPal.all %}
+        {% if UserChat.profile.avatar %}
+            <img src="{{ UserChat.profile.avatar.url }}" alt="avatar" width="50" height=50">
+        {% endif %}
+        <a href="{% url 'profiles' UserChat.profile.id %}"><u>{{ UserChat }}</u></a><br>
+    {% endfor %}
+    <a href="{% url 'room' chatter.nameChat %}"><u>Перейти в чат</u></a> <br>
+    <a href="{% url 'chat_edit' chatter.id %}"><u>Редактировать</u></a>
+</div>
+{% endblock content %}

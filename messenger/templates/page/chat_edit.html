@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<form method="POST">
+    <div class="textform">
+        {% csrf_token %}
+        {{ form.as_p  }}
+        <input type="submit" class="pressbutton" value="Добавить в чат">
+    </div>
+</form>
+
+
+{% endblock content %}

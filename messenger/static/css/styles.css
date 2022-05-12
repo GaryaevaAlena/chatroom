@@ -1,0 +1,131 @@
+.header{
+    width:100%;
+    height: 60px;
+    background-color: #6c757d;
+}
+
+.inner-header{
+}
+
+.logo-container{
+    float: left;
+    height: 80px;
+}
+
+.logo-container h1{
+   color: white;
+   font-size: 25px;
+   padding: 0px 20px;
+   font-family: Arial;
+}
+
+.navigation{
+    float: right;
+    width: 685px;
+    height: 60px;
+}
+
+.navigation a{
+   display: table;
+   float: left;
+   padding: 10px 20px;
+   font-family: Arial;
+}
+
+.navigation a li{
+    vertical-align: middle;
+    display: table-cell;
+    font-size: 20px;
+    color: white;
+}
+
+.navigation a:link{
+    text-decoration: none;
+}
+
+.navigation a:hover{
+    color: #4a0000;
+}
+
+.content{
+    font-family: Arial;
+}
+
+.content h3{
+    font-size: 25px;
+    color: #1a2a10;
+    padding: 10px 20px;
+}
+
+.content p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.content a{
+    font-size: 20px;
+    padding: 10px 20px;
+    line-height: 30px;
+    color: #332f2c;
+    text-decoration: none;
+}
+
+.content :link{
+    color: #332f2c;
+    text-decoration: none;
+}
+
+.content :hover{
+    color: #4a0000;
+}
+
+.content img {
+    float: left;
+}
+
+.pressbutton {
+    border-radius: 5px;
+    background: #6c757d;
+    display: block;
+    margin: auto;
+    width: 500px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+}
+
+.pressbutton:hover {
+    background: #545b62;
+    color: white;
+}
+
+.textform {
+    border-radius: 5px;
+    width: 500px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    font-size: 18px;
+}
+
+.ref {
+    color: #1a2a10;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.picture {
+    width: 150px;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.chatform {
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    font-size: 16px;
+}
